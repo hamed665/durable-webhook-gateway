@@ -1,0 +1,6 @@
+FROM python:3.12-slim
+WORKDIR /app
+COPY . .
+USER 65532:65532
+ENV PYTHONDONTWRITEBYTECODE=1
+CMD ["python", "demo.py"]
