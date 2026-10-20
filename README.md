@@ -1,11 +1,15 @@
 # Durable Webhook Gateway
 
+### A Hamed Minaei engineering project
+
 ![Verify](https://github.com/hamed665/durable-webhook-gateway/actions/workflows/verify.yml/badge.svg)
 
 A signed webhook ingress and durable work scheduler that handles duplicate events, worker crashes and retry exhaustion.
 
 **Status:** tested reference implementation with a reproducible synthetic CLI demo.
-Built as an independent engineering portfolio project by [Hamed Minaei](https://github.com/hamed665).
+**Project owner & maintainer:** [Hamed Minaei](https://github.com/hamed665)  
+**Engineering focus:** Reliable event processing  
+**License:** MIT · Copyright © 2026 Hamed Minaei
 
 ## Features
 
@@ -79,6 +83,13 @@ Verify exact raw bytes before parsing and keep the signing secret outside versio
 ## Limitations
 
 This is a tested scheduling library, not a hosted gateway. There is no HTTP listener, outbound transport, destination allowlist or SSRF defense because it never performs network delivery. Supply a reviewed adapter before exposing it. Delivery is at least once: a worker crash after sending but before acknowledgment can duplicate the external effect. Consumers must deduplicate. Dead-letter replay, retention and distributed database operation are not implemented.
+
+## Maintainer
+
+[Hamed Minaei](https://github.com/hamed665) owns and maintains this portfolio repository.
+For implementation details, review the source, behavioral tests and merged pull requests.
+See [AUTHORS.md](AUTHORS.md) for development attribution and [ENGINEERING.md](ENGINEERING.md)
+for a concise technical walkthrough.
 
 ## Attribution and ownership
 
