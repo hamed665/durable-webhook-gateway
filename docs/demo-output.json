@@ -1,0 +1,23 @@
+{
+  "synthetic": true,
+  "accepted": true,
+  "duplicate_accepted": false,
+  "after_failure": [
+    {
+      "id": "demo-order",
+      "state": "pending",
+      "attempts": 1,
+      "due": 1760000002.0,
+      "last_error": "delivery failed"
+    }
+  ],
+  "final": [
+    {
+      "id": "demo-order",
+      "state": "done",
+      "attempts": 2,
+      "due": 1760000006.0,
+      "last_error": null
+    }
+  ]
+}
